@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BiShow } from "react-icons/bi";
 
 interface CTextInputProps {
     label?: string;
@@ -15,7 +14,7 @@ interface CTextInputProps {
     onBlur?(): void;
     isError?: boolean;
     errorMessage?: string;
-    [propName: string]: any
+    [propName: string]: any;
 };
 
 interface CTextInputState {
@@ -129,7 +128,7 @@ export default class CTextInput extends React.Component <CTextInputProps, CTextI
                         }}
                         {...rest}
                     />
-                    {!this.props.rightIcon && <BiShow size={18} color="#414141" />}
+                    {this.props.rightIcon && <RightIcon />}
                 </TextInputWrapper>
                 {this.props.errorMessage && <ErrorMessage>{this.props.errorMessage}</ErrorMessage>}
             </Wrapper>

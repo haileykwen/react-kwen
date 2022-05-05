@@ -1,4 +1,5 @@
 import CGoogleLogin from './global/components/CGoogleLogin';
+import CRichTextInput from './global/components/CRichTextInput';
 import CTextInput from './global/components/CTextInput';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <div>
       <CGoogleLogin onSuccess={onSuccessGoogleLogin} onFailure={onFailureGoogleLogin} />
       <CTextInput label="button" type='number' />
+      <CRichTextInput label='Rich Text Editor' />
     </div>
   );
 }
